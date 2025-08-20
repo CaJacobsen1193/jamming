@@ -37,7 +37,7 @@ const tracks = [
 function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [playlist, setPlaylist] = useState([]);
-  const [toExport, setToExport] = useState([]);
+  const [playlistName, setPlaylistName] = useState('PLAYLIST');
 
 
   const search = async (term) => {
@@ -61,8 +61,15 @@ function App() {
     setPlaylist(prev => prev.filter(t => t.id !== track.id));
   }
 
-  const exportPlaylist = () => {
-    setToExport(playlist.map(track => track.uri))
+  const save = async (name, playlist) => {
+    const tracksUri = playlist.map(track => track.uri);
+    Spotify.savePlaylist(name, tracksUri).then(() => {
+      setPlaylist([])
+    })
+  }
+
+  const updatePlaylistName = name => {
+    setPlaylistName(name);
   }
   
 
@@ -80,9 +87,12 @@ function App() {
            onAdd={addTrack}/>
         </div>
         <div className='playlist'>
-          <Playlist tracks={playlist}
-          onRemove={removeTrack}
-          onExport={exportPlaylist}/>
+          <Playlist 
+          onSave={save}
+          onChange={updatePlaylistName}
+          playlistName={playlistName}
+          tracks={playlist}
+          onRemove={removeTrack}/>
         </div>
       </div>
 

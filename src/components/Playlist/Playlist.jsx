@@ -4,15 +4,22 @@ import ListPanel from '../ListPanel/ListPanel';
 import styles from './Playlist.module.css';
 
 function Playlist(props) {
-  const [title, setTitle] = useState('PLAYLIST');
+  const [title, setTitle] = useState('PLAYLIST')
 
   const handleChange = (e) => {
+    props.onChange(e.target.value);
     setTitle(e.target.value);
   };
 
+  const save = () => {
+    props.onSave(title, props.tracks);
+    setTitle('PLAYLIST')
+  }
   const actionBtn = (
-    <button className={styles.saveButton}>SAVE/EXPORT</button>
+    <button className={styles.saveButton} onClick={save}>SAVE/EXPORT</button>
   );
+
+  
 
   return (
     <ListPanel

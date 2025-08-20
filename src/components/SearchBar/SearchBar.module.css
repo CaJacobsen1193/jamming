@@ -21,6 +21,10 @@
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+    user-select: none;
+    transition: transform 90ms ease, box-shadow 150ms ease, opacity 150ms ease, filter 150ms ease;
+    will-change: transform;
+
 }
 
 .input {
@@ -35,3 +39,21 @@
     font-size: 20px;
     font-family: Comfortaa, sans-serif;  
 }
+
+.submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  filter: brightness(1.05);
+}
+
+.submit:active:not(:disabled) {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+.subimt:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+

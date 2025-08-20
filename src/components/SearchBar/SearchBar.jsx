@@ -14,15 +14,25 @@ function SearchBar(props) {
         setTerm('')
     }
 
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            search();
+        }
+    }
+
 
     return (
         <div className={styles.searchBar}>
             <input className={styles.input}
-             placeholder='Search By Song Name'
+             placeholder='Search'
              onChange={handleChange}
-             value={term}/>
-            <button className={styles.submit}
-            onClick={search}>Search</button>
+             value={term}
+             onKeyDown={handleKeyDown}/>
+            <button 
+            className={styles.submit}
+            onClick={search}>FIND TRACKS
+            </button>
         </div>
     )
 }
