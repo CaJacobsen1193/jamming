@@ -1,0 +1,30 @@
+.resultHeader { 
+    color: rgb(23, 232, 33);
+    display: flex; 
+    align-items: flex-end;     
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    font-size: 30px;
+    border-bottom: 5px solid black;          
+    height: 50px;         
+    font-family: Comfortaa, sans-serif;     
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: rgb(45, 41, 41, 0.75);
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    max-height: 600px;
+    margin-bottom: 100px;
+}
+
+.list {
+    flex: 1;
+    overflow-y: auto;
+}

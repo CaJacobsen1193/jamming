@@ -1,0 +1,66 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: rgba(45, 41, 41, 0.75);
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 600px;
+  margin-bottom: 100px;
+}
+
+.header {
+  color: rgb(23, 232, 33);
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 20px;
+  margin-top: 15px;
+  border-bottom: 5px solid black;
+  line-height: 1.2;
+  height: 50px;
+  font-family: Comfortaa, sans-serif;
+}
+
+.title {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.titleInput {
+  font-size: 30px;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  padding-right: 12px;
+}
+
+.content {
+  overflow-y: auto;
+  flex: 1;
+  padding: 0;
+}

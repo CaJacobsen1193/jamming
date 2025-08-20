@@ -1,0 +1,12 @@
+/* Only the button style is specific to Playlist; everything else is shared in ListPanel */
+.saveButton {
+  border: none;
+  border-radius: 10px;
+  height: 36px;
+  padding: 0 16px;
+  background-color: rgb(23, 232, 33);
+  font: inherit;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
