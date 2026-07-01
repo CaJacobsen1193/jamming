@@ -163,14 +163,6 @@ Authorization: Bearer <access_token>
 
 ---
 
-## Extending the App
-
-- Add more scopes (e.g., user-read-email, playlist-modify-private) if you expand features.  
-- Persist playlist drafts in localStorage or a backend.  
-- Add paging, filters, or artist/album views to search results.
-
----
-
 ## License
 
 For educational/demo purposes. Review Spotify’s Developer Terms before deploying publicly.
